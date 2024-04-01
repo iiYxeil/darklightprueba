@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+    background: var(--bg); /* Utiliza la variable de color para el fondo */
+    color: var(--text); /* Utiliza la variable de color para el texto */
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+nav {
+    height: 70px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    background-color: var(--bg-nav); /* Utiliza la variable de color para el fondo del nav */
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    
+}
+
+header {
+    padding: 1em;
+    background-color: red;
+    margin-bottom: 1em;
+    padding-bottom: 3.5em;
+    text-align: center;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 65%, 50% 100%, 0% 65%, 0 0);
+}
+
+.dropdown {
+    position: absolute;
+    width: 200px;
+    opacity: 0  ;
+    z-index: 2;
+    background-color: blue;
+    border-top: 2px solid white;
+
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 3rem;
+    margin-top: 24px;
+    padding: 0.5rem;
+    transform: translateX(-40%);
+
+    transition: opacity .15s ease-out;
+}
+
+.has-dropdown:focus-within .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown-item a{
+    width: 100%;
+    height: 100%;
+    size: 0.7rem;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.dropdown-item a::before {
+    content: ' ';
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+:root {
+    --colordark1: gray;
+    --colordark2: rgb(106, 106, 106);
+    --colordark3: rgb(83, 83, 83);
+    --colordark4: rgb(69, 68, 68);
+    --colordark5: rgb(48, 48, 48);
+    --colordark6: rgb(31, 31, 31);
+    --blue: rgb(8, 0, 255);
+    --yellow: yellow;
+    --purple: purple; 
+}
+
+.light {
+    --bg: var(--colordark1);
+    --bg-nav: linear-gradient(to right, var(--colordark2), var(--colordark3));
+    --bg-dropdown: var(--colordark1);
+    --text: var(--colordark6);
+    --border-color: var(--blue);
+    --bg-solar: var(--yellow);
+
+    background: var(--bg); /* Utiliza la variable de color para el fondo */
+    color: var(--text); /* Utiliza la variable de color para el texto */
+
+}
+
+.dark {
+    --bg: var(--colordark5);
+    --bg-nav: linear-gradient(to right, var(--colordark5), var(--colordark6));
+    --bg-dropdown: var(--colordark6);
+    --text: var(--colordark1);
+
+   
+}
